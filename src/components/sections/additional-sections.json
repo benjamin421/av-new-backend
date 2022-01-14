@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_additional_sections",
+  "info": {
+    "name": "Additional sections",
+    "icon": "chalkboard-teacher"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

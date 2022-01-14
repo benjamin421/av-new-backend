@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_case_study_elements",
+  "info": {
+    "name": "Case study elements",
+    "icon": "edit"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
