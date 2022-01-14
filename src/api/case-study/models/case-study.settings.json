@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "name": "Case study",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text"
+    },
+    "client": {
+      "type": "string"
+    },
+    "completion": {
+      "type": "date"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "elements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.case-study-elements"
+    },
+    "additional": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.additional-sections"
+    },
+    "categories": {
+      "collection": "category"
+    }
+  }
+}

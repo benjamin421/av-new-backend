@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Services",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "writer": {
+      "model": "writer",
+      "via": "services"
+    },
+    "price": {
+      "type": "string"
+    },
+    "product_type": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.additional-sections"
+    },
+    "categories": {
+      "collection": "category"
+    }
+  }
+}

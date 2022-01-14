@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service-categories",
+  "info": {
+    "name": "Services Categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
